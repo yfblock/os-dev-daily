@@ -8,9 +8,6 @@ steps:
         path: /root/site # 将maven下载依赖的目录挂载出来，防止重复下载
     commands:
     - cp -r ./* /root/site
-    when:
-      branch:
-      - master
 
 
 volumes: # 定义流水线挂载目录，用于共享数据
