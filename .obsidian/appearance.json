@@ -1,4 +1,7 @@
 {
-  "cssTheme": "Gastown",
-  "theme": "moonstone"
+  "cssTheme": "Blue Topaz",
+  "theme": "moonstone",
+  "translucency": false,
+  "baseFontSize": 15,
+  "monospaceFontFamily": ""
 }
