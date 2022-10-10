@@ -3,4 +3,4 @@
 
 ## 2022-10-10
 1. 读一篇论文 [[The case for writing a kernel in Rust]]
-2. 
+2. 开始
