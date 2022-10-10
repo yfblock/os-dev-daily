@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "要做的事.md",
+            "file": "todo.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "要做的事.md",
+                "file": "todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "要做的事.md",
+                "file": "todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "要做的事.md"
+                "file": "todo.md"
               }
             }
           }
@@ -130,10 +130,11 @@
   },
   "active": "e1b0daddc34c7c67",
   "lastOpenFiles": [
+    "daily.md",
     "unikraft paper.md",
+    "todo.md",
     "_sidebar.md",
     "README.md",
-    "daily.md",
     "2022-10-10.md",
     "README.en.md"
   ]
