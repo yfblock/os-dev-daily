@@ -3,5 +3,6 @@
   "theme": "moonstone",
   "translucency": false,
   "baseFontSize": 15,
-  "monospaceFontFamily": ""
+  "monospaceFontFamily": "",
+  "textFontFamily": "NotoSansMono Nerd Font"
 }
