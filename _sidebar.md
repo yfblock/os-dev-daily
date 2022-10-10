@@ -1,4 +1,5 @@
 * [主页](/)
-* [Daily](daily.md)
+* [Daily](meeting.md)
 * [Paper Reading](#)
   - [Unikraft](unikraft%20paper.md)
+  - [[The case for writing a kernel in Rust]]
