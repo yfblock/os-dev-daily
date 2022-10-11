@@ -1,25 +1,18 @@
 ---
-theme: uncover
-_class: invert
-header: "**experice of os comp**"
-footer: "haust"
+theme: gaia
+header: "**OS 内核赛参赛分享**"
 marp: true
 paginate: true
 ---
 
-# experience of os comp
-1) One
-2) Two
-3) Three
+<!-- _class: lead -->
+# `experience` of os-comp
 
 ---
 
-## Hello World!
-- One
-- Two
-- Three
+## OS 比赛
 
-1. 1
-2. 3
-3. 3
+全称：2022全国大学生计算机系统能力大赛操作系统设计大赛
+链接：[https://os.educg.net/2022CSCC](https://os.educg.net/2022CSCC)
+
 ---
