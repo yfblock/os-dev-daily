@@ -6,6 +6,29 @@ paginate: true
 backgroundColor: white
 ---
 
+<style>
+section.split {
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+        "slideheading slideheading slideheading"
+        "leftpanel centerpanel rightpanel";
+}
+/* debug */
+section.split h3, 
+section.split .ldiv, 
+section.split .rdiv { border: 1.5pt dashed dimgray; }
+section.split h3 {
+    grid-area: slideheading;
+    font-size: 50px;
+}
+section.split .ldiv { grid-area: leftpanel; }
+section.split .cdiv { grid-area: centerpanel; }
+section.split .rdiv { grid-area: rightpanel; }
+</style>
+
 <!-- _class: lead -->
 # `experience` of os-comp
 ##### 分享人：杨金博
@@ -42,6 +65,18 @@ backgroundColor: white
 - 初赛测例全过
 - 决赛第一阶段测例全过
 - 决赛第二阶段测例过大部分
+
+---
+
+### 值得注意的地方
+
+- 尽量不要重复造轮子，可以在不同的地方寻找你需要的东西。比如 OS 比赛需要的文件系统。可以在 Github 和 crates.io 搜索到合适的进行使用。但是也要考虑版本是否为最新。例如 fatfs (一个 fat32 文件系统) 在 crates.io 上最新版本为 0.3.5，在 github 上的最新版本为0.4.0。
+
+---
+
+### 初赛
+
+2022 年初赛内容为一些 Syscall 测试用例
 
 ---
 
