@@ -68,6 +68,4 @@ void _liblinuxuplat_entry(int argc, char *argv[])
 	ukplat_entry(argc, argv);
 }
 ```
-根据注释函数名称和注释可以看出基本的逻辑，首先初始化 `CPU` 功能，然后初始化 `console`，最后进入 `Unikraft`。这里的 `argc` 和 `argv` 是由 `linux` 传递过来。 `ukplat_entry` 在 `lib/ukboot/boot.c` 中。在其他平台是先进行初始化后再进入内核初始化。
-### Step 3
-在 `ukplat_entry` 中进行设备和模块的初始化，[Unikraft Booting](https://unikraft.org/docs/develop/booting/)中有对启动顺序的简单描述。
+根据注释函数名称和注释可以看出基本的逻辑，首先初始化 `CPU` 功能，然后初始化 `console`，最后进入 `Unikraft`。这里的 `argc` 和 `argv` 是由 `linux` 传递过来。 `ukplat_entry` 在 `lib/ukboot/boot.c` 中[[boot#ukboot]]。在其他平台是先进行初始化后再进入内核初始化。
