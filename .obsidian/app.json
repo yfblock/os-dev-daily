@@ -1,7 +1,7 @@
 {
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "strictLineBreaks": true,
+  "strictLineBreaks": false,
   "pdfExportSettings": {
     "pageSize": "A4",
     "landscape": false,
