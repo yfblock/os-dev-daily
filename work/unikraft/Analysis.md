@@ -1,0 +1,51 @@
+## Modules
+- posix-process
+- syscall_shim
+- ukallocpool
+- ukbus
+- uklibparam
+- ukring
+- uksignal
+- uktime
+- nolibc
+- posix-socket
+- ubsan
+- ukallocregion
+- ukcpio
+- uklock
+- ukrust
+- uksp
+- uktimeconv
+- posix-event
+- posix-sysinfo
+- uk9p
+- ukargparse
+- ukdebug
+- ukmmap
+- uksched
+- ukstore
+- fdt
+- posix-futex
+- posix-user
+- ukalloc
+- ukblkdev
+- ukfalloc
+- ukmpi
+- ukschedcoop
+- ukswrand
+- isrlib
+- posix-libdl
+- ukallocbbuddy
+- ukboot [[boot#ukboot]]
+- ukfallocbuddy
+- uknetdev
+- uksglist
+- uktest
+- 9pfs [[vfs#9pfs]]
+- devfs [[vfs#devfs]]
+- vfscore [[vfs#vfscore]]
+- ramfs [[vfs#ramfs]]
+
+## Boot Time
+为了更简单的分析 `Unikraft` 的内核，因此采取最简单的路径进行分析，即 `x86` 的 `linux` 作为宿主机进入内核执行的代码。具体流程如下：
+1. `linux` 运行 `unikraft` 程序，入口地址为 `plat/linuxu/x86/entry64.S` 文件中的 `_liblinuxuplat_start`，完成参数入栈和栈对齐等操作后进入函数 `_liblinuxuplat_entry`。在 `entry64.S` 中还定义了一个 `_liblinuxuplat_start_err`，也许在后面可能会用到。
