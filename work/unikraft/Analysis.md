@@ -6,7 +6,6 @@
 - uklibparam
 - ukring
 - uksignal
-- uktime
 - nolibc
 - posix-socket
 - ubsan
@@ -14,8 +13,7 @@
 - ukcpio
 - uklock
 - ukrust
-- uksp
-- uktimeconv
+- uksp [[boot#uksp]]
 - posix-event
 - posix-sysinfo
 - uk9p
@@ -41,6 +39,8 @@
 - uknetdev
 - uksglist
 - uktest 包含了 `UK_ASSERT` 相关的数据
+- uktime [[Interrupt#uktime]]
+- uktimeconv [[Interrupt#uktimeconv]]
 - 9pfs [[vfs#9pfs]]
 - devfs [[vfs#devfs]]
 - vfscore [[vfs#vfscore]]

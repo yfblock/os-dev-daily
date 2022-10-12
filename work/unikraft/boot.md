@@ -4,3 +4,5 @@
 
 简单初始化后进入同文件的 `main_thread_func` 中，`main_thread_func` 对一些内容进行初始化操作后进入 `main` 函数。
 
+## uksp
+只包含了 `uk_stack_chk_guard_setup` 和 `__stack_chk_fail`
