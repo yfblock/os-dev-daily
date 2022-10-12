@@ -4,7 +4,7 @@
 - posix-process
 - syscall_shim
 - ukallocpool
-- ukbus
+- ukbus [[device#ukbus]]
 - uklibparam
 - ukring [[utils#ukring]]
 - uksignal
