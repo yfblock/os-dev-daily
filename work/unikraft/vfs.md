@@ -77,4 +77,6 @@ struct vnops {
 };
 ```
 
-需要在其他的模块中实现相关的接口信息，然后利用宏将相关的接口传递到
+需要在其他的模块中实现相关的接口信息，然后利用宏 `UK_FS_REGISTER` 将相关的接口放在 `section uk_fs_list` 中暴露出去，可以被 `vfscore` 感知并使用。如果相关接口没有实现，可以将 `vfscore_nullop` 传递过去。
+
+文件系统相关的系统调用使用宏 `UK_LLSYSCALL_R_DEFINE` 进行重定义和导出，可以被感知和使用。
