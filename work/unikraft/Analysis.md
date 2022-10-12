@@ -4,15 +4,15 @@
 - ukallocpool
 - ukbus
 - uklibparam
-- ukring
+- ukring [[utils#ukring]]
 - uksignal
-- nolibc
+- nolibc [[libc#nolibc]]
 - posix-socket
-- ubsan
+- ubsan [[utils#ubsan]]
 - ukallocregion
 - ukcpio
 - uklock
-- ukrust
+- ukrust [[ukrust#ukrust]]
 - uksp [[boot#uksp]]
 - posix-event
 - posix-sysinfo
@@ -22,7 +22,7 @@
 - ukmmap
 - uksched
 - ukstore
-- fdt
+- fdt [[boot#fdt]]
 - posix-futex
 - posix-user
 - ukalloc
@@ -31,7 +31,7 @@
 - ukmpi
 - ukschedcoop
 - ukswrand
-- isrlib
+- isrlib [[utils#isrlib]]
 - posix-libdl
 - ukallocbbuddy
 - ukboot [[boot#ukboot]]
