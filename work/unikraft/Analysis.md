@@ -40,7 +40,7 @@
 - ukfallocbuddy
 - uknetdev
 - uksglist
-- uktest
+- uktest 包含了 `UK_ASSERT` 相关的数据
 - 9pfs [[vfs#9pfs]]
 - devfs [[vfs#devfs]]
 - vfscore [[vfs#vfscore]]
