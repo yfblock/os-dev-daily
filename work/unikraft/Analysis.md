@@ -2,9 +2,9 @@
 
 ## Modules
 - ukalloc [[alloc#ukalloc]]
-- ukallocpool
-- ukallocregion
-- ukallocbbuddy [[alloc#allocbbuddy]]
+- ukallocpool [[alloc#ukallocpool]]
+- ukallocregion [[alloc#ukallocregion]]
+- ukallocbbuddy [[alloc#ukallocbbuddy]]
 - ukfalloc
 - ukfallocbuddy
 - posix-process [[process#posix-process]]
