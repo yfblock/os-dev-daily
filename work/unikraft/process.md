@@ -23,3 +23,16 @@ static int mutex_metrics_ctor(void);
 void uk_mutex_get_metrics(struct uk_mutex_metrics *dst);
 void uk_semaphore_init(struct uk_semaphore *s, long count);
 ```
+
+## ukshed
+一个线程调度器并且包含了线程相关的结构。
+
+## ukshedcoop
+同样也是一个线程调度器。
+
+## uksglist
+定义了信号系统的基本结构和函数，包含添加、删除等操作，主要是对信号队列的处理。
+
+## uksignal
+这个模块包含了信号相关的系统调用和函数，主要是针对信号的具体处理。
+

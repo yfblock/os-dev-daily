@@ -15,4 +15,7 @@ struct mmap_addr {
 static struct mmap_addr *mmap_addr;
 ```
 以及一些系统调用 `mmap`、`munmap`。
-还有 `mremap`、`madvise`、`mprotect`，
+还有 `mremap`、`madvise`、`mprotect`，不过这些系统调用是空的。
+
+## posix-user
+包含了用户和用户组的相关操作并重写了系统调用。同样也包含了密码操作。

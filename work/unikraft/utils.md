@@ -123,3 +123,35 @@ int gethostname(char *name, size_t len);
 
 ## ukdebug
 很像 `Rust` 的 `log` 库，包含了输出相关的函数和宏，不过额外的存在一些其他的调试功能，比如 `hexdump` 和 `asmdump`。`hexdump` 似乎是用来输出内存，而 `asmdump` 用来反汇编代码？
+
+## ukmpi
+好像是一个叫 `mailbox` 的东西的库，不太了解。
+
+## ukswrand
+```c
+ssize_t getrandom(void *buf, size_t buflen, unsigned int flags);
+void uk_swrand_init_r(struct uk_swrand *r, unsigned int seedc, const __u32 seedv[]);
+__u32 uk_swrand_randr_r(struct uk_swrand *r);
+  
+__u32 uk_swrandr_gen_seed32(void);
+/* Uses the pre-initialized default generator  */
+/* TODO: Add assertion when we can test if we are in interrupt context */
+/* TODO: Revisit with multi-CPU support */
+static inline __u32 uk_swrand_randr(void)
+{
+    unsigned long iflags;
+    __u32 ret;
+  
+    iflags = ukplat_lcpu_save_irqf();
+    ret = uk_swrand_randr_r(&uk_swrand_def);
+    ukplat_lcpu_restore_irqf(iflags);
+  
+    return ret;
+}
+ssize_t uk_swrand_fill_buffer(void *buf, size_t buflen);;
+
+```
+根据接口来看似乎是一个生成随机数的工具库。
+
+## ukstore
+包含了一些存取操作，根据函数名和系统调用来看似乎就是一个 `type` 库，而且实现了引用计数相关的功能。

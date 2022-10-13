@@ -20,3 +20,9 @@ static int uk_bus_lib_init(void);
 >This is derived from uknetdev because of consistency reasons
 
 这个模块包含了 `blk` 设备的操作接口定义和基本的函数以及注册方法。主要功能在头文件中。
+
+## uknetdev
+网络设备，没有详细去看。
+
+## posix-socket
+`socket` 相关的设备驱动和操作
