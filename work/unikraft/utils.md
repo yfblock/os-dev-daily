@@ -111,3 +111,15 @@ UK_SYSCALL_R_DEFINE(int, sethostname, const char*, name, size_t, len);
 int gethostname(char *name, size_t len);
 
 ```
+
+## uklibparam
+包含了 `unikraft` 参数列表读取设置。 包含 `uk_usage`，主要用在 `boot` 期间，当 `CONFIG_LIBUKLIBPARAM` 开启时会读取参数，如果参数不匹配则输出 `usage` 信息，如果匹配则进行处理。
+
+## ukargparse
+包含两个函数：`left_shift` 和 `uk_argnparse`。似乎是用来从字符串中匹配参数用的。
+
+## ukcpio
+似乎是一个解压工具，包含了相关操作。包含 `ukcpio_extract`、`read_section`、`absolute_path` 等。 似乎和其他模块的耦合度也不是很高。
+
+## ukdebug
+很像 `Rust` 的 `log` 库，包含了输出相关的函数和宏，不过额外的存在一些其他的调试功能，比如 `hexdump` 和 `asmdump`。`hexdump` 似乎是用来输出内存，而 `asmdump` 用来反汇编代码？

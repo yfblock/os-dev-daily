@@ -14,3 +14,12 @@ UK_SYSCALL_R_DEFINE(int, vfork)
 }
 ```
 后面又大致看了一下其他的东西，感觉这个模块也是一个半成品。
+
+## uklock
+包含了 `mutex` 操作，以及一个原子操作的初始化函数。
+```c
+void uk_mutex_init(struct uk_mutex *m);
+static int mutex_metrics_ctor(void);
+void uk_mutex_get_metrics(struct uk_mutex_metrics *dst);
+void uk_semaphore_init(struct uk_semaphore *s, long count);
+```

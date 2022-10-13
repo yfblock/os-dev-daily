@@ -32,11 +32,48 @@ if (!a) {
 ## ukallocregion
 这同样也是一个分配器，下面是官方给出的一些说明
 
-> ukallocregion is a minimalist region implementation. Note that deallocation is not supported. This makes sense because regions only allow for deallocation at region-granularity. In our case, this would imply the freeing of the entire heap, which is generally not possible.
-Obviously, the lack of deallocation support makes ukallocregion a fairly bad
-general-purpose allocator. This allocator is interesting in that it offers
-maximum speed allocation and deallocation (no bookkeeping). It can be used as
-a baseline for measurements (e.g., boot time) or as a first-level allocator
-in a nested context.
+> ukallocregion is a minimalist region implementation. Note that deallocation is not supported. This makes sense because regions only allow for deallocation at region-granularity. In our case, this would imply the freeing of the entire heap, which is generally not possible. Obviously, the lack of deallocation support makes ukallocregion a fairly bad general-purpose allocator. This allocator is interesting in that it offers maximum speed allocation and deallocation (no bookkeeping). It can be used as a baseline for measurements (e.g., boot time) or as a first-level allocator in a nested context.
 
 ukallocregion 是一个极简的区域实现。请注意，不支持解除分配。 这是有道理的，因为区域只允许在区域粒度上释放。 在我们的例子中，这将意味着释放整个堆，这通常是不可能的。显然，缺乏释放支持使得 ukallocregion 相当糟糕通用分配器。 这个分配器很有趣，因为它提供最大速度分配和释放（无簿记）。 它可以用作测量的基线（例如，启动时间）或作为第一级分配器在嵌套上下文中。
+
+## ukfalloc
+一个 `frame allocator` 接口，这个模块中只有一个头文件，定义了接口，目前只有一个页帧分配器实现 [[alloc#ukallocbbuddy]]
+```c
+struct uk_falloc {
+	int (*falloc)(struct uk_falloc *fa, __paddr_t *paddr, unsigned long frames, unsigned long flags);
+	int (*falloc_from_range)(struct uk_falloc *fa, __paddr_t *paddr, unsigned long frames, unsigned long flags, __paddr_t min, __paddr_t max);
+	int (*ffree)(struct uk_falloc *fa, __paddr_t paddr, unsigned long frames);
+	int (*addmem)(struct uk_falloc *fa, void *metadata, __paddr_t paddr, unsigned long frames, __vaddr_t dm_off);
+	__sz free_memory;
+	__sz total_memory;
+}
+
+static inline __paddr_t uk_falloc(struct uk_falloc *fa, unsigned long frames)
+{
+    __paddr_t lpaddr = __PADDR_ANY;
+    int rc;
+  
+    UK_ASSERT(fa);
+    UK_ASSERT(fa->falloc);
+  
+    rc = fa->falloc(fa, &lpaddr, frames, 0);
+    if (unlikely(rc))
+        return __PADDR_INV;  
+    return lpaddr;
+}
+
+static inline void uk_ffree(struct uk_falloc *fa, __paddr_t paddr,
+                unsigned long frames)
+{
+    int rc __maybe_unused;
+  
+    UK_ASSERT(fa);
+    UK_ASSERT(fa->ffree);
+  
+    rc = fa->ffree(fa, paddr, frames);
+    UK_ASSERT(rc == 0);
+}
+```
+
+## ukfallocbuddy
+一个页帧分配器的伙伴算法的实现。

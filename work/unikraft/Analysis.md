@@ -5,25 +5,25 @@
 - ukallocpool [[alloc#ukallocpool]]
 - ukallocregion [[alloc#ukallocregion]]
 - ukallocbbuddy [[alloc#ukallocbbuddy]]
-- ukfalloc
-- ukfallocbuddy
+- ukfalloc [[alloc#ukfalloc]]
+- ukfallocbuddy [[alloc#ukfallocbuddy]]
 - posix-process [[process#posix-process]]
 - syscall_shim [[libc#syscall_shim]]
 - ukbus [[device#ukbus]]
-- uklibparam
+- uklibparam [[utils#uklibparam]]
 - ukring [[utils#ukring]]
 - uksignal
 - nolibc [[libc#nolibc]]
 - posix-socket
 - ubsan [[utils#ubsan]]
-- ukcpio
-- uklock
+- ukcpio [[utils#ukcpio]]
+- uklock [[process#uklock]]
 - ukrust [[ukrust#ukrust]]
 - uksp [[boot#uksp]]
 - posix-event
 - posix-sysinfo [[utils#posix-sysinfo]]
 - uk9p [[device#uk9p]]
-- ukargparse
+- ukargparse [[utils#ukargparse]]
 - ukdebug
 - ukmmap
 - uksched
@@ -31,7 +31,7 @@
 - fdt [[boot#fdt]]
 - posix-futex [[utils#posix-futex]]
 - posix-user
-- ukblkdev
+- ukblkdev [[device#ukblkdev]]
 - ukmpi
 - ukschedcoop
 - ukswrand

@@ -14,3 +14,9 @@ static unsigned int uk_bus_probe_all(void);
 static int uk_bus_lib_init(void);
 ```
 利用 `uk_initcall_class_prio` 加入 `section` 中在系统启动时初始化。利用 `UK_LIST_HEAD(uk_bus_list);` 做了一些操作
+
+## ukblkdev
+下面是官方的说明:
+>This is derived from uknetdev because of consistency reasons
+
+这个模块包含了 `blk` 设备的操作接口定义和基本的函数以及注册方法。主要功能在头文件中。
