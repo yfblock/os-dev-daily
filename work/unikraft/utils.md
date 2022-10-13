@@ -75,3 +75,39 @@ const char *version __unused)
 	return 0;
 }
 ```
+
+## posix-sysinfo
+这个模块包含了 `sysinfo` 相关的系统调用，并将系统信息定义在这个模块内部。
+```c
+static struct utsname utsname = {
+	.sysname = "Unikraft",
+	.nodename = "unikraft",
+	/* glibc looks into the release field to check the kernel version:
+	* We prepend '5-' in order to be "new enough" for it.
+	*/
+	.release = "5-" STRINGIFY(UK_CODENAME),
+	.version = STRINGIFY(UK_FULLVERSION),
+#ifdef CONFIG_ARCH_X86_64
+	.machine = "x86_64"
+#elif CONFIG_ARCH_ARM_64
+	.machine = "arm64"
+#elif CONFIG_ARCH_ARM_32
+	.machine = "arm32"
+#else
+#error "Set your machine architecture!"
+#endif
+};
+```
+下面是函数表：
+```c
+UK_SYSCALL_R_DEFINE(int, sysinfo, struct sysinfo *, info);
+long fpathconf(int fd __unused, int name __unused);
+long pathconf(const char *path __unused, int name __unused);
+long sysconf(int name);
+size_t confstr(int name __unused, char *buf __unused, size_t len __unused);
+int getpagesize(void);
+UK_SYSCALL_R_DEFINE(int, uname, struct utsname *, buf);
+UK_SYSCALL_R_DEFINE(int, sethostname, const char*, name, size_t, len);
+int gethostname(char *name, size_t len);
+
+```

@@ -1,9 +1,14 @@
 > Unikraft 的模块并不是完全做到松耦合的，一些模块之间还是存在一些依赖关系，一个模块被选择的时候一定要含有另一个模块。可能会存在循环依赖的模块使用写入 `section` 指针的方式来感知模块。因此实现的一种模块化。
 
 ## Modules
+- ukalloc [[alloc#ukalloc]]
+- ukallocpool
+- ukallocregion
+- ukallocbbuddy [[alloc#allocbbuddy]]
+- ukfalloc
+- ukfallocbuddy
 - posix-process [[process#posix-process]]
 - syscall_shim [[libc#syscall_shim]]
-- ukallocpool
 - ukbus [[device#ukbus]]
 - uklibparam
 - ukring [[utils#ukring]]
@@ -11,13 +16,12 @@
 - nolibc [[libc#nolibc]]
 - posix-socket
 - ubsan [[utils#ubsan]]
-- ukallocregion
 - ukcpio
 - uklock
 - ukrust [[ukrust#ukrust]]
 - uksp [[boot#uksp]]
 - posix-event
-- posix-sysinfo
+- posix-sysinfo [[utils#posix-sysinfo]]
 - uk9p [[device#uk9p]]
 - ukargparse
 - ukdebug
@@ -27,17 +31,13 @@
 - fdt [[boot#fdt]]
 - posix-futex [[utils#posix-futex]]
 - posix-user
-- ukalloc
 - ukblkdev
-- ukfalloc
 - ukmpi
 - ukschedcoop
 - ukswrand
 - isrlib [[utils#isrlib]]
 - posix-libdl [[utils#posix-libdl]]
-- ukallocbbuddy
 - ukboot [[boot#ukboot]]
-- ukfallocbuddy
 - uknetdev
 - uksglist
 - uktest 包含了 `UK_ASSERT` 相关的数据
