@@ -1,8 +1,8 @@
 > Unikraft 的模块并不是完全做到松耦合的，一些模块之间还是存在一些依赖关系，一个模块被选择的时候一定要含有另一个模块。可能会存在循环依赖的模块使用写入 `section` 指针的方式来感知模块。因此实现的一种模块化。
 
 ## Modules
-- posix-process
-- syscall_shim
+- posix-process [[process#posix-process]]
+- syscall_shim [[libc#syscall_shim]]
 - ukallocpool
 - ukbus [[device#ukbus]]
 - uklibparam
@@ -25,7 +25,7 @@
 - uksched
 - ukstore
 - fdt [[boot#fdt]]
-- posix-futex
+- posix-futex [[utils#posix-futex]]
 - posix-user
 - ukalloc
 - ukblkdev
@@ -34,7 +34,7 @@
 - ukschedcoop
 - ukswrand
 - isrlib [[utils#isrlib]]
-- posix-libdl
+- posix-libdl [[utils#posix-libdl]]
 - ukallocbbuddy
 - ukboot [[boot#ukboot]]
 - ukfallocbuddy
