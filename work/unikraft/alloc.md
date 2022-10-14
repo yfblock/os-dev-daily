@@ -23,7 +23,7 @@ if (!a) {
 但是这个 `a` 是什么还没有搞清楚，但是根据 `uk_alloc_addmem` 的函数描述来看，这个 `a` 似乎就是一个分配器，这段代码的逻辑是如果没有分配器的话就初始化一个分配器，如果已经有分配器的话就将内存加到分配器上。
 
 ## ukallocbbuddy
-实现了一个 `buddy` 分配器，在 [[alloc#ukalloc]] 中介绍过，分配器会在 `boot` 期间被初始化。
+实现了一个 `buddy` 分配器，在 [[work/unikraft/alloc#ukalloc]] 中介绍过，分配器会在 `boot` 期间被初始化。
 
 ## ukallocpool
 类似于上述的 `allocbbuddy`，是一个可以初始化的 `allocator`。
@@ -37,7 +37,7 @@ if (!a) {
 ukallocregion 是一个极简的区域实现。请注意，不支持解除分配。 这是有道理的，因为区域只允许在区域粒度上释放。 在我们的例子中，这将意味着释放整个堆，这通常是不可能的。显然，缺乏释放支持使得 ukallocregion 相当糟糕通用分配器。 这个分配器很有趣，因为它提供最大速度分配和释放（无簿记）。 它可以用作测量的基线（例如，启动时间）或作为第一级分配器在嵌套上下文中。
 
 ## ukfalloc
-一个 `frame allocator` 接口，这个模块中只有一个头文件，定义了接口，目前只有一个页帧分配器实现 [[alloc#ukallocbbuddy]]
+一个 `frame allocator` 接口，这个模块中只有一个头文件，定义了接口，目前只有一个页帧分配器实现 [[work/unikraft/alloc#ukallocbbuddy]]
 ```c
 struct uk_falloc {
 	int (*falloc)(struct uk_falloc *fa, __paddr_t *paddr, unsigned long frames, unsigned long flags);

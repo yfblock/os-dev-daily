@@ -1,12 +1,12 @@
 > Unikraft 的模块并不是完全做到松耦合的，一些模块之间还是存在一些依赖关系，一个模块被选择的时候一定要含有另一个模块。可能会存在循环依赖的模块使用写入 `section` 指针的方式来感知模块。因此实现的一种模块化。
 
 ## Modules
-- ukalloc [[alloc#ukalloc]]
-- ukallocpool [[alloc#ukallocpool]]
-- ukallocregion [[alloc#ukallocregion]]
-- ukallocbbuddy [[alloc#ukallocbbuddy]]
-- ukfalloc [[alloc#ukfalloc]]
-- ukfallocbuddy [[alloc#ukfallocbuddy]]
+- ukalloc [[work/unikraft/alloc#ukalloc]]
+- ukallocpool [[work/unikraft/alloc#ukallocpool]]
+- ukallocregion [[work/unikraft/alloc#ukallocregion]]
+- ukallocbbuddy [[work/unikraft/alloc#ukallocbbuddy]]
+- ukfalloc [[work/unikraft/alloc#ukfalloc]]
+- ukfallocbuddy [[work/unikraft/alloc#ukfallocbuddy]]
 - posix-process [[process#posix-process]]
 - syscall_shim [[libc#syscall_shim]]
 - ukbus [[device#ukbus]]
