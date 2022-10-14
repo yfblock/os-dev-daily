@@ -4,33 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "768d7afe5ac1e814",
+        "id": "3e9d0438a7468be0",
         "type": "tabs",
         "children": [
           {
-            "id": "384b4c78244d642d",
+            "id": "a6e5476e3b7f4d1d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "work/theseus/Analysis.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73e7cdd440275c45",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.0.0"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "work/theseus/Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "work/theseus/Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "work/theseus/Analysis.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -145,16 +126,15 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "73e7cdd440275c45",
+  "active": "36111c2fc9275927",
   "lastOpenFiles": [
-    "work/theseus/Alloc.md",
     "work/theseus/Analysis.md",
+    "work/theseus/Alloc.md",
     "work/unikraft/process.md",
     "work/unikraft/libc.md",
     "work/unikraft/Analysis.md",
