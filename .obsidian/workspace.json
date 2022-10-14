@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "096e2d272f522f41",
+    "type": "split",
+    "children": [
+      {
+        "id": "768d7afe5ac1e814",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "384b4c78244d642d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "work/theseus/Analysis.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "73e7cdd440275c45",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.0.0"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7703cfa56a2b2290",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8d756e12149a694",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36111c2fc9275927",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1cc96d3c7fcd6330",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7b590e1b4ebc5cbc",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c5db1ac8a5dd8aa5",
+    "type": "split",
+    "children": [
+      {
+        "id": "eddbe8f2e0a08fb1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fdaabd69187b0ac6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "work/theseus/Analysis.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "90bab5cfaef9bacb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "work/theseus/Analysis.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7c994098b08dd7b4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "bef5e8e09f297804",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "work/theseus/Analysis.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "73e7cdd440275c45",
+  "lastOpenFiles": [
+    "work/theseus/Alloc.md",
+    "work/theseus/Analysis.md",
+    "work/unikraft/process.md",
+    "work/unikraft/libc.md",
+    "work/unikraft/Analysis.md",
+    "work/unikraft/utils.md",
+    "work/unikraft/device.md",
+    "work/unikraft/boot.md",
+    "work/unikraft/vfs.md",
+    "work/unikraft/Interrupt.md"
+  ]
+}

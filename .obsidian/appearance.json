@@ -4,5 +4,6 @@
   "translucency": false,
   "baseFontSize": 15,
   "monospaceFontFamily": "",
-  "textFontFamily": "NotoSansMono Nerd Font"
+  "textFontFamily": "NotoSansMono Nerd Font",
+  "accentColor": ""
 }
