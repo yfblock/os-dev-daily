@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/work.md",
+                "file": "todo.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily/work.md",
+                "file": "todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily/work.md",
+                "file": "todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily/work.md"
+                "file": "todo.md"
               }
             }
           }
@@ -141,8 +141,8 @@
   },
   "active": "a6e5476e3b7f4d1d",
   "lastOpenFiles": [
-    "daily/meeting.md",
     "daily/work.md",
+    "daily/meeting.md",
     "ppt/Comp.md",
     "work/theseus/Analysis.md",
     "work/theseus/Alloc.md",

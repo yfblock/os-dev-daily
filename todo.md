@@ -11,4 +11,10 @@
 * 看论文 `unikraft` 和 `theseus` 并阅读源代码，主要是`unikraft`，目前可能还需要看 `theseus`。
 * ~~2022-9-30 晚 7 点有操作系统交流会，分享 unikraft 相关的解析。~~
 * 根据 `unikraft`提供的思路实现一个基于 `Rust` 的模块化文件系统。可以选择支持哪些文件系统。
-* **2022-10-13 周四上午** 分享关于 `theseus` 和 `unikraft` 的解析。[[unikraft paper]]
+* ~~**2022-10-13 周四上午** 分享关于 `theseus` 和 `unikraft` 的解析。[[unikraft paper]]~~
+- 2022-10-16 安排下周工作：
+	1. 继续阅读 `Theseus` 和 `redleaf` 的源码和论文
+	2. 根据目前已经了解的模块相关的信息编写模块：
+		- alloc 相关模块，包括 alloc 和 falloc，目前观看了  `Theseus`、`redleaf`、`unikraft` 的做法，可能会综合一下。
+		- vfs 相关的模块，预期将 vfs 接口做一层抽象，单独放在 `vfs-interface` 文件夹中，然后实现如 `fat32`、`ramfs` 等文件系统，最后创建一个 `vfs-core` 来管理这些文件系统模块，通过 `feature` 或者其他的方式来选择使用哪些文件系统。
+	3. 可能的工作是：每天阅读一篇操作系统相关的英文文献或者文章，锻炼一下这方面的能力（如果有时间的话）。
