@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "todo.md",
+                "file": "daily/work.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "todo.md",
+                "file": "daily/work.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "todo.md",
+                "file": "daily/work.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "todo.md"
+                "file": "daily/work.md"
               }
             }
           }
@@ -141,15 +141,15 @@
   },
   "active": "a6e5476e3b7f4d1d",
   "lastOpenFiles": [
+    "work/module/尝试利用宏实现模块化的相关信息.md",
     "daily/work.md",
+    "todo.md",
     "daily/meeting.md",
     "ppt/Comp.md",
     "work/theseus/Analysis.md",
     "work/theseus/Alloc.md",
     "work/unikraft/process.md",
     "work/unikraft/libc.md",
-    "work/unikraft/Analysis.md",
-    "work/unikraft/utils.md",
-    "work/unikraft/device.md"
+    "work/unikraft/Analysis.md"
   ]
 }
