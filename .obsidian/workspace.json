@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "daily/work.md",
+                "file": "work/module/尝试利用宏实现模块化的相关信息.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "196f4c34f3c2426c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "work/embassy/embassy.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily/work.md",
+                "file": "work/embassy/embassy.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily/work.md",
+                "file": "work/embassy/embassy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily/work.md"
+                "file": "work/embassy/embassy.md"
               }
             }
           }
@@ -139,9 +152,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "a6e5476e3b7f4d1d",
+  "active": "196f4c34f3c2426c",
   "lastOpenFiles": [
     "work/module/尝试利用宏实现模块化的相关信息.md",
+    "work/embassy/embassy.md",
     "daily/work.md",
     "todo.md",
     "daily/meeting.md",
@@ -149,7 +163,6 @@
     "work/theseus/Analysis.md",
     "work/theseus/Alloc.md",
     "work/unikraft/process.md",
-    "work/unikraft/libc.md",
-    "work/unikraft/Analysis.md"
+    "work/unikraft/libc.md"
   ]
 }
