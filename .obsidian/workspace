@@ -1,74 +1,41 @@
 {
   "main": {
-    "id": "096e2d272f522f41",
+    "id": "4ac42339246fe142",
     "type": "split",
     "children": [
       {
-        "id": "3e9d0438a7468be0",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a6e5476e3b7f4d1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "work/module/尝试利用宏实现模块化的相关信息.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "196f4c34f3c2426c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "work/embassy/embassy.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bc377b7222a94ba9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+        "id": "2291000f41f39b26",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "work/theseus/Analysis.md",
+            "mode": "source",
+            "source": false
           }
-        ],
-        "currentTab": 2
+        }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "7703cfa56a2b2290",
+    "id": "3aff7baf57c1d879",
     "type": "split",
     "children": [
       {
-        "id": "b8d756e12149a694",
+        "id": "dba1ac95ff0189fa",
         "type": "tabs",
         "children": [
           {
-            "id": "36111c2fc9275927",
+            "id": "c74a5515f5a6a7e0",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical"
-              }
+              "state": {}
             }
           },
           {
-            "id": "1cc96d3c7fcd6330",
+            "id": "86bd59c1054eed51",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -83,7 +50,7 @@
             }
           },
           {
-            "id": "7b590e1b4ebc5cbc",
+            "id": "b51182b84fe89833",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -97,20 +64,20 @@
     "width": 300
   },
   "right": {
-    "id": "c5db1ac8a5dd8aa5",
+    "id": "64d7ee55d0bd16d9",
     "type": "split",
     "children": [
       {
-        "id": "eddbe8f2e0a08fb1",
+        "id": "8e87370ffdfc91bc",
         "type": "tabs",
         "children": [
           {
-            "id": "fdaabd69187b0ac6",
+            "id": "04b848a2e50c668d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "work/theseus/Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,19 +89,19 @@
             }
           },
           {
-            "id": "90bab5cfaef9bacb",
+            "id": "6f7e64ef40cb2cf8",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "work/theseus/Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "7c994098b08dd7b4",
+            "id": "f83479deca608586",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -145,36 +112,33 @@
             }
           },
           {
-            "id": "bef5e8e09f297804",
+            "id": "2b1d6571ff28be19",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "work/theseus/Analysis.md"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "bc377b7222a94ba9",
+  "active": "2291000f41f39b26",
   "lastOpenFiles": [
-    "work/embassy/embassy.md",
-    "work/module/尝试利用宏实现模块化的相关信息.md",
-    "daily/work.md",
-    "todo.md",
-    "daily/meeting.md",
-    "ppt/Comp.md",
-    "work/theseus/Analysis.md",
-    "work/theseus/Alloc.md",
+    "work/unikraft/Analysis.md",
+    "work/unikraft/boot.md",
+    "work/unikraft/utils.md",
+    "work/unikraft/device.md",
+    "work/unikraft/Interrupt.md",
+    "work/unikraft/libc.md",
     "work/unikraft/process.md",
-    "work/unikraft/libc.md"
+    "work/unikraft/alloc.md",
+    "work/unikraft/ukrust.md",
+    "work/unikraft/vfs.md"
   ]
 }
