@@ -1,0 +1,1 @@
+目前使用 `inventory` 出现了一些问题，`Inventory` 似乎不支持 target = "none" 的情况（由于 ctor 不支持，Inventory 是基于 `ctor`，linkme 似乎正常工作。）
