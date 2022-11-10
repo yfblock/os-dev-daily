@@ -26,3 +26,8 @@
 ## 2022-10-18
 1. 阅读 `embassy` 代码，[https://github.com/embassy-rs/embassy](https://github.com/embassy-rs/embassy)
 2. 尝试利用宏实现模块化的相关信息 [[尝试利用宏实现模块化的相关信息]]
+
+## 2022-11-10
+1. 实现设备抽象
+2. 完善 设备读取
+3. 实现对于设备树的读取和使用
