@@ -30,8 +30,8 @@ section.split .rdiv { grid-area: rightpanel; }
 </style>
 
 <!-- _class: lead -->
-# `experience` of os-comp
-##### 分享人：杨金博
+# `OS` 内核赛参赛经验分享
+##### 分享人：杨金博  河南科技大学
 
 ---
 ### OS 比赛
@@ -47,7 +47,7 @@ section.split .rdiv { grid-area: rightpanel; }
 
 ### 我能参加 OS 比赛吗？
 
-先介绍一下我在参加 OS 比赛时的基础，对 riscv 有一点了解，在四年前使用 C 写过一点 x86 的内核（或许称为裸机程序更为合理），刚刚开始了解 Rust, 但是对一些语法仍旧不是很熟悉，比如 Rust 的 Result 是在比赛一段时间后刷 Rustlings 才了解并使用，在比赛的初期仍处于和 Rust 编译器高强度对抗阶段。参加比赛时刚刚开始看 rcore-tutorial V3，开始写比赛的内核时学习到第四章。在比赛期间逐渐了解更多内核的知识和内核相关应用程序(比赛测例)。
+先介绍一下我在参加 OS 比赛时的基础，对 riscv 有一点了解，在四年前使用 C 写过一点 x86 的内核（或许称为裸机程序更为合理），今年刚刚开始了解 Rust, 但是对一些语法仍旧不是很熟悉，比如 Rust 的 Result 是在比赛一段时间后刷 Rustlings 才了解并使用，在比赛的初期仍处于和 Rust 编译器高强度对抗阶段。参加比赛时刚刚开始看 rcore-tutorial V3，开始写比赛的内核时学习到第四章。在比赛期间逐渐了解更多内核的知识和内核相关应用程序(比赛测例)。
 
 比赛的周期比较长，有足够的时间去学习需要用的知识，但是有一些前置的知识会更轻松一点。
 
@@ -70,22 +70,21 @@ section.split .rdiv { grid-area: rightpanel; }
 
 ### 值得注意的地方
 
-- 尽量不要重复造轮子，可以在不同的地方寻找你需要的东西。比如 OS 比赛需要的文件系统。可以在 Github 和 crates.io 搜索到合适的进行使用。
+- 尽量不要重复造轮子，可以在不同的地方寻找你需要的东西。比如 OS 比赛需要的文件系统。可以在 Github 和 crates.io 搜索到合适的进行使用，使用已经有的库可以让我们把精力集中在其他的地方。
 - 在 crates.io 上找到需要的库后可以进入他的 Github 查看具体的版本和使用方式。例如 fatfs (一个 fat32 文件系统) 在 crates.io 上最新版本为 0.3.5，在 github 上的最新版本为0.4.0。
-- 使用 Rustsbi 时注意版本和 Debug/Release 模式。
-- 遇到问题时可以去读读测例的源码，查看它的逻辑，对实现可能有一些帮助。
+- 遇到问题时可以去读读测例的源码，查看它的逻辑，对实现可能有一些帮助，在实现的过程中也需要经常性的去 Debug。
 
 ---
 
 ### 值得注意的地方
 
-- 采用适合自己的开发方式。
+- 采用适合自己的开发环境。
 
 - 善用 Git 的版本控制和分支功能，每一个阶段都可以去创建一个 branch 或者记录当前的 commit，方便后面遇到问题时进行回滚。
 
 - 在开发的过程中完善自己的文档，每一个阶段都对文档进行补充，方便后面的更新。
 
-- 善于利用 Debug 功能，不仅仅是对于内核的 Debug，同样也有对于应用程序的 Debug（默认情况下比赛提供的应用程序不包含完整的符号表，需要自己去编译）。
+- 善于利用 Debug 功能，不仅仅是对于内核的 Debug，同样也有对于应用程序的 Debug（默认情况下比赛提供的应用程序不包含完整的符号表，需要自己去编译，可以看到具体是程序的哪一部分出现问题，然后针对性的调试）。
 
 ---
 
@@ -95,7 +94,7 @@ section.split .rdiv { grid-area: rightpanel; }
 
 - Debug 工具 riscv-elf-gdb (也可以是其他的工具)
 
-- 调试 libc 和测例的编译工具链 Buildroot，buildroot 可以构建编译器，构建的 libc 可以选择包含符号表。
+- 调试 libc 和测例的编译工具链 Buildroot，buildroot 可以构建编译器，构建的 libc 可以选择包含符号表，可以针对 libc 进行调试。
 
 - hexdump 和 readelf，方便查看编译后的程序信息。
 
@@ -168,7 +167,7 @@ OS 比赛的遇到问题解决方案大致有以下几种：
 
 - 如果对 OS 比赛有兴趣，想看看今年的比赛内容并进行尝试，可以参考一下内容
 - 比赛测例仓库：[https://github.com/oscomp/testsuits-for-oskernel](https://github.com/oscomp/testsuits-for-oskernel)
-- os 训练仓库(包含 libc-test、busybox、lua、lmbench) [https://github.com/learningOS/oscomp-kernel-training](https://github.com/learningOS/oscomp-kernel-training)
+- os 训练仓库(基于 Github Classroom 对 os 比赛内核赛环境的复现，包含 libc-test、busybox、lua、lmbench) [https://github.com/learningOS/oscomp-kernel-training](https://github.com/learningOS/oscomp-kernel-training)
 - 比赛官网 [https://os.educg.net/2022CSCC](https://os.educg.net/2022CSCC)
 
 ---
