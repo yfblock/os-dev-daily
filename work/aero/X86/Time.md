@@ -1,0 +1,191 @@
+```rust
+  
+
+const PIT_FREQUENCY_HZ: usize = 1000;
+
+pub const PIT_DIVIDEND: usize = 1193182;
+
+  
+
+static UPTIME_RAW: AtomicUsize = AtomicUsize::new(0);
+
+static UPTIME_SEC: AtomicUsize = AtomicUsize::new(0);
+
+  
+
+pub static EPOCH: AtomicUsize = AtomicUsize::new(usize::MAX);
+
+pub static REALTIME_CLOCK: Mutex<aero_syscall::TimeSpec> = Mutex::new(aero_syscall::TimeSpec {
+
+tv_sec: 0,
+
+tv_nsec: 0,
+
+});
+
+  
+
+pub fn get_uptime_ticks() -> usize {
+
+UPTIME_SEC.load(Ordering::SeqCst)
+
+}
+
+  
+
+pub fn get_realtime_clock() -> TimeSpec {
+
+REALTIME_CLOCK.lock_irq().clone()
+
+}
+
+  
+
+/// Returns the current amount of PIT ticks.
+
+pub fn get_current_count() -> u16 {
+
+unsafe {
+
+io::outb(0x43, 0);
+
+  
+
+let lower = io::inb(0x40) as u16;
+
+let higher = io::inb(0x40) as u16;
+
+  
+
+(higher << 8) | lower
+
+}
+
+}
+
+  
+
+pub fn set_reload_value(new_count: u16) {
+
+// Channel 0, lo/hi access mode, mode 2 (rate generator)
+
+unsafe {
+
+io::outb(0x43, 0x34);
+
+io::outb(0x40, new_count as u8);
+
+io::outb(0x40, (new_count >> 8) as u8);
+
+}
+
+}
+
+  
+
+pub fn set_frequency(frequency: usize) {
+
+let mut new_divisor = PIT_DIVIDEND / frequency;
+
+  
+
+if PIT_DIVIDEND % frequency > frequency / 2 {
+
+new_divisor += 1;
+
+}
+
+  
+
+set_reload_value(new_divisor as u16);
+
+}
+
+  
+
+fn pit_irq_handler(_stack: &mut InterruptStack) {
+
+{
+
+let interval = aero_syscall::TimeSpec {
+
+tv_sec: 0,
+
+tv_nsec: (1000000000 / PIT_FREQUENCY_HZ) as isize,
+
+};
+
+  
+
+let mut this = REALTIME_CLOCK.lock_irq();
+
+  
+
+if this.tv_nsec + interval.tv_nsec > 999999999 {
+
+let diff = (this.tv_nsec + interval.tv_nsec) - 1000000000;
+
+  
+
+this.tv_nsec = diff;
+
+this.tv_sec += 1;
+
+} else {
+
+this.tv_nsec += interval.tv_nsec
+
+}
+
+  
+
+this.tv_sec += interval.tv_sec;
+
+}
+
+  
+
+let value = UPTIME_RAW.fetch_add(1, Ordering::Relaxed); // Increment uptime raw ticks.
+
+  
+
+if value % PIT_FREQUENCY_HZ == 0 {
+
+UPTIME_SEC.fetch_add(1, Ordering::Relaxed); // Increment uptime seconds
+
+crate::syscall::check_timers();
+
+}
+
+}
+
+  
+
+/// This function is responsible for initializing the PIT chip and setting
+
+/// up the IRQ.
+
+pub fn init() {
+
+apic::get_local_apic().timer_calibrate();
+
+  
+
+REALTIME_CLOCK.lock().tv_sec = EPOCH.load(Ordering::SeqCst) as _;
+
+  
+
+set_frequency(PIT_FREQUENCY_HZ);
+
+  
+
+let pit_vector = interrupts::allocate_vector();
+
+interrupts::register_handler(pit_vector, pit_irq_handler);
+
+  
+
+apic::io_apic_setup_legacy_irq(0, pit_vector, 1); // Set up the IRQ.
+
+}
+```
