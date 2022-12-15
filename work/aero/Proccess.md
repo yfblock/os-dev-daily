@@ -1,6 +1,6 @@
 - [ ] Study the process and thread of aero
 
-Aero 似乎并没有县城这个概念，Aero 中的函数在创建 Task 时 tid 与 pid 保持一致，似乎并没有线程的概念，全部用进程表示。
+Aero 似乎并没有线程这个概念，Aero 中的函数在创建 Task 时 tid 与 pid 保持一致，似乎并没有线程的概念，全部用进程表示。
 Aero 中 Task 的数据结构如下：
 ```rust
 pub struct Task {
