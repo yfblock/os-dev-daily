@@ -41,3 +41,5 @@ pub(super) exit_status: AtomicIsize,
 ```
 
 `Task` 中包含了 `ArchTask` 结构，将架构相关的 `Task`  结构 `ArchTask` 独立出来。
+
+不过 `Aero` 应该是有实现 `Thread` 的想法的，再 `arch` 下的 `x86` 文件夹里有 `tls` 文件。
